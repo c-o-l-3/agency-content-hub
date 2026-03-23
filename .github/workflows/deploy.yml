@@ -24,8 +24,8 @@ jobs:
       - name: Build Site
         run: |
           cd site
-          npm install
-          npm run build
+          npm install marked gray-matter
+          node build.js
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
